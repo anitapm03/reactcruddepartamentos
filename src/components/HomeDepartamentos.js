@@ -28,23 +28,7 @@ export default class HomeDepartamentos extends Component {
         })
     }
 
-    deleteDepartamento = (e) => {
-        if (e != null ){
-            e.preventDefault();
-        }
-
-        var eliminar = window.confirm("Seguro que quiere eliminar?");
-
-        if ( eliminar == true){
-            alert("Eliminado!");
-        } else {
-            alert("Operación cancelada");
-        }
-
-        /*axios.delete(this.urlDepartamentos+request).then(response => {
-            console.log("Eliminado con exito!");
-        })*/
-    }
+    
 
   render() {
 
@@ -72,7 +56,7 @@ export default class HomeDepartamentos extends Component {
                             <button className='btn btn-info'>Modificar</button>
                         </td>
                         <td>
-                            <button className='btn btn-danger' onClick={this.deleteDepartamento}>Eliminar</button>
+                            <NavLink className='btn btn-danger' to={"/delete/" + depto.numero}>Eliminar</NavLink>
                         </td>
                         <td>
                             <NavLink className='btn btn-success' to={"/detalledepartamento/"+ depto.numero}>Detalle</NavLink>
