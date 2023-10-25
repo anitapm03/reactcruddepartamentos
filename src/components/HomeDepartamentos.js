@@ -53,18 +53,22 @@ export default class HomeDepartamentos extends Component {
                         <td>{depto.nombre}</td>
                         <td>{depto.localidad}</td>
                         <td>
-                            <NavLink className='btn btn-info' to={"/update/" + depto.numero}>Modificar</NavLink>
+                            <NavLink className='btn btn-info' to={"/update/" + depto.numero}>
+                                Modificar</NavLink>
                         </td>
                         <td>
-                            <NavLink className='btn btn-danger' to={"/delete/" + depto.numero}>Eliminar</NavLink>
+                            <NavLink className='btn btn-danger' to={"/delete/" + depto.numero}>
+                                Eliminar</NavLink>
                         </td>
                         <td>
-                            <NavLink className='btn btn-success' to={"/detalledepartamento/"+ depto.numero}>Detalle</NavLink>
+                            <NavLink className='btn btn-success' to={"/detalledepartamento/"+ depto.numero}>
+                                Detalle</NavLink>
                         </td>
                     </tr>)
                 })):
                 (
-                <img className='position-absolute top-50 start-50 translate-middle' src={loading} style={{width: "300px", height: "300px"}} />
+                <img className='position-absolute top-50 start-50 translate-middle' src={loading} 
+                style={{width: "300px", height: "300px"}} />
                 )
                 }
             </tbody>
