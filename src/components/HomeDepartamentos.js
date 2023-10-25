@@ -53,7 +53,7 @@ export default class HomeDepartamentos extends Component {
                         <td>{depto.nombre}</td>
                         <td>{depto.localidad}</td>
                         <td>
-                            <button className='btn btn-info'>Modificar</button>
+                            <NavLink className='btn btn-info' to={"/update/" + depto.numero}>Modificar</NavLink>
                         </td>
                         <td>
                             <NavLink className='btn btn-danger' to={"/delete/" + depto.numero}>Eliminar</NavLink>
